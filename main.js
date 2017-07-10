@@ -1,6 +1,5 @@
 
 let musicPlayer = document.getElementById('musicplayer');
-// let trackSearch = document.getElementById('search-field');
 let searchButton = document.getElementById('searchbutton');
 let searchField = document.getElementById('searchfield');
 
@@ -8,7 +7,6 @@ searchButton.addEventListener('click', searchUser);
 
 function searchUser() {
   event.preventDefault();
-  // preventDefault stops the page from reloading which was causing a break somewhere in the function(note: this can also be fixed by changing the "form" to a "div")
   let string = searchField.value;
   console.log(string);
   let userAPI = 'http://api.soundcloud.com/users/?client_id=8538a1744a7fdaa59981232897501e04&q=' + string;
